@@ -1,2 +1,4 @@
 FROM nginx:alpine
-COPY . /usr/share/nginx/html
+RUN apt-get update
+COPY hey.html /usr/share/nginx/html
+EXPOSE 80
